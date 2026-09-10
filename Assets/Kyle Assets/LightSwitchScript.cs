@@ -12,7 +12,8 @@ public class LightSwitchScript : MonoBehaviour
         action.action.Enable();
         action.action.performed += (ctx) =>
         {
-            currentLight.color = Color.red;
+            //currentLight.color = Color.red;
+            currentLight.color = new Color(Random.value, Random.value, Random.value);
         };
     }
 
@@ -21,7 +22,7 @@ public class LightSwitchScript : MonoBehaviour
     {
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
-            currentLight.color = Color.red;
+            currentLight.color = new Color(Random.value, Random.value, Random.value);
         }
     }
 }

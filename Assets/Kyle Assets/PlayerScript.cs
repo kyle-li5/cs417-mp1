@@ -3,9 +3,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField] Transform leftControllerTransform;
     [SerializeField] Vector3 insideTransform;
     [SerializeField] Vector3 outsideTransform;
     private bool inside;
+
+    [SerializeField] GameObject spawnPrefab;
+    private bool spawned;
+    private GameObject face;
+
+    [SerializeField] AudioClip destroyClip;
 
     public InputActionReference breakOutAction;
     public InputActionReference spawnAction;
@@ -33,6 +40,29 @@ public class PlayerScript : MonoBehaviour
         };
 
         // spawning logic
+        spawned = false;
+        spawnAction.action.Enable();
+        spawnAction.action.performed += (ctx) =>
+        {
+            //if (!spawned)
+            //{
+            //    //GameObject face = Instantiate(spawnPrefab, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Quaternion.identity);
+            //    //face = Instantiate(spawnPrefab, new Vector3(0, 8.91f, 0), Quaternion.identity);
+            //    face = Instantiate(spawnPrefab, new Vector3(2, 10, 5), Quaternion.identity);
+            //    face.GetComponent<FaceScript>().setVelocity(leftControllerTransform.forward); 
+            //    face.transform.GetChild(0).GetComponent<AudioSource>().Play();
+            //    spawned = true;
+            //} else
+            //{
+            //    AudioSource.PlayClipAtPoint(destroyClip, face.transform.position);
+            //    Destroy(face);
+            //    spawned = false;
+            //}
+            face = Instantiate(spawnPrefab, new Vector3(2, 10, 5), Quaternion.identity);
+            face.GetComponent<FaceScript>().setVelocity(leftControllerTransform.forward);
+            face.transform.GetChild(0).GetComponent<AudioSource>().Play();
+            spawned = true;
+        };
     }
     
     void Update()
