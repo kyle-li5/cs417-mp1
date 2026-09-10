@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class LightSwitchScript : MonoBehaviour
 {
     [SerializeField] Light currentLight;
+    [SerializeField] AudioSource audioSource;
 
     public InputActionReference action;
     void Start()
@@ -14,6 +15,7 @@ public class LightSwitchScript : MonoBehaviour
         {
             //currentLight.color = Color.red;
             currentLight.color = new Color(Random.value, Random.value, Random.value);
+            audioSource.Play();
         };
     }
 

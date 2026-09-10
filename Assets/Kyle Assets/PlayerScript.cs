@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     private bool inside;
 
     [SerializeField] GameObject spawnPrefab;
+    [SerializeField] GameObject facePrefab;
+    [SerializeField] GameObject angryFacePrefab;
     private bool spawned;
     private GameObject face;
 
@@ -16,6 +18,8 @@ public class PlayerScript : MonoBehaviour
 
     public InputActionReference breakOutAction;
     public InputActionReference spawnAction;
+    public InputActionReference faceAction;
+    public InputActionReference angryFaceAction;
 
     void Start()
     {
@@ -40,7 +44,6 @@ public class PlayerScript : MonoBehaviour
         };
 
         // spawning logic
-        spawned = false;
         spawnAction.action.Enable();
         spawnAction.action.performed += (ctx) =>
         {
@@ -58,10 +61,36 @@ public class PlayerScript : MonoBehaviour
             //    Destroy(face);
             //    spawned = false;
             //}
-            face = Instantiate(spawnPrefab, new Vector3(2, 10, 5), Quaternion.identity);
-            face.GetComponent<FaceScript>().setVelocity(leftControllerTransform.forward);
-            face.transform.GetChild(0).GetComponent<AudioSource>().Play();
-            spawned = true;
+            GameObject obj = Instantiate(spawnPrefab, new Vector3(0, 12, 0), Quaternion.identity);
+            obj.GetComponent<SpawnedPlanetScript>().setVelocity(leftControllerTransform.forward);
+            // face.transform.GetChild(0).GetComponent<AudioSource>().Play();
+            // spawned = true;
+        };
+
+        // face logic
+        faceAction.action.Enable();
+        faceAction.action.performed += (ctx) =>
+        {
+            Transform camera = transform.GetChild(0).transform.GetChild(0).transform;
+            Instantiate(facePrefab, new Vector3(camera.position.x, camera.position.y, 7), Quaternion.identity);
+        };
+
+        // angry face logic
+        spawned = false;
+        angryFaceAction.action.Enable();
+        angryFaceAction.action.performed += (ctx) =>
+        {
+            if (!spawned)
+            {
+               face = Instantiate(angryFacePrefab, new Vector3(0, 8.91f, 0), Quaternion.identity);
+            //    face.transform.GetChild(0).GetComponent<AudioSource>().Play();
+               spawned = true;
+            } else
+            {
+               AudioSource.PlayClipAtPoint(destroyClip, face.transform.position);
+               Destroy(face);
+               spawned = false;
+            }
         };
     }
     
