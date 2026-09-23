@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a8a5674097dc3044ebd3bb4f0d3c467d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - potSoil: {fileID: 703125990236994623, guid: 9389626750fe3374b862120a13a25feb, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
