@@ -10084,6 +10084,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4515387325323381439, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4752751310566698308, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2049198
@@ -10127,6 +10131,14 @@ PrefabInstance:
     - target: {fileID: 5386017693762189310, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
       propertyPath: m_Name
       value: usbstick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386017693762189310, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617097952496908491, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10263,6 +10275,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1735227531311621872, guid: 48c423dd86d15df4abe733accb437574, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a800b39eff84b154b8321810d3988095, type: 2}
     - target: {fileID: 3673649247906780142, guid: 48c423dd86d15df4abe733accb437574, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6511456
