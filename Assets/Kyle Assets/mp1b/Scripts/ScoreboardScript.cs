@@ -7,19 +7,27 @@ public class ScoreboardScript : MonoBehaviour
     [SerializeField] Material redGlow;
     [SerializeField] Material yellowGlow;
     [SerializeField] Material greenGlow;
+    
+    [SerializeField] int completedLocks;
 
+    [SerializeField] Animator door;
+    [SerializeField] GameObject exitTeleporter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        exitTeleporter.SetActive(false);
+        completedLocks = 0;
         PowerCableScript.pluggedIn += HandlePlug;
         CollectibleScript.keycard += HandleKeycard;
         HologramScript.correctSOS += HandleFuel;
+        FuelProgressBar.fullyFueled += HandleFuel;
     }
 
     private void OnDestroy() {
         PowerCableScript.pluggedIn -= HandlePlug;
         CollectibleScript.keycard -= HandleKeycard;
         HologramScript.correctSOS -= HandleFuel;
+        FuelProgressBar.fullyFueled -= HandleFuel;
     }
 
     void HandlePlug(bool isPluggedIn) {
@@ -27,6 +35,7 @@ public class ScoreboardScript : MonoBehaviour
         Material[] materials = meshRenderer.materials;
         materials[0] = greenGlow;
         meshRenderer.materials = materials;
+        completedLocks++;
     }
 
     public void HandleKeycard(bool keycard) {
@@ -39,6 +48,7 @@ public class ScoreboardScript : MonoBehaviour
             Material[] materials = meshRenderer.materials;
             materials[0] = greenGlow;
             meshRenderer.materials = materials;
+            completedLocks++;
             HandleUSB(false);
         }
     }
@@ -53,6 +63,7 @@ public class ScoreboardScript : MonoBehaviour
             Material[] materials = meshRenderer.materials;
             materials[0] = greenGlow;
             meshRenderer.materials = materials;
+            completedLocks++;
         }
     }
 
@@ -66,12 +77,17 @@ public class ScoreboardScript : MonoBehaviour
             Material[] materials = meshRenderer.materials;
             materials[0] = greenGlow;
             meshRenderer.materials = materials;
+            completedLocks++;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (completedLocks >= 4) {
+            door.Play("ExitDoorOpen");
+            exitTeleporter.SetActive(true);
+            this.enabled = false;
+        }
     }
 }

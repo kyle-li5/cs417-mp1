@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/kyle-mp1a.unity
     guid: 0dff951dbbbf3254e9578e616d39a9c0
+  - enabled: 1
+    path: Assets/Scenes/kyle-mp1b.unity
+    guid: 1a763ba4d1f2da34fabeef66cfdfd41b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 054e5c2748fc7cc4aad5f4ad9124e546, type: 2}

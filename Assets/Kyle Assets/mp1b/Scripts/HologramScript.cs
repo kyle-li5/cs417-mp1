@@ -20,6 +20,7 @@ public class HologramScript : MonoBehaviour
     [SerializeField] Color submitGreen = new Color(129, 250, 83);
     [SerializeField] Color submitRed = new Color(255, 0, 0);
     [SerializeField] MorseScript morseScript;
+    [SerializeField] GameObject finishedText;
 
     public static event Action<bool> correctSOS;
 
@@ -27,6 +28,7 @@ public class HologramScript : MonoBehaviour
 
     void Start()
     {
+        finishedText.SetActive(false);
         pluggedIn = false;
         Material[] materials = meshRenderer.materials;
         materials[0] = blackLED;
@@ -80,6 +82,7 @@ public class HologramScript : MonoBehaviour
             materials[0] = greenGlow;
             meshRenderer.materials = materials;
             correctSOS?.Invoke(false);
+            finishedText.SetActive(true);
         }
         else {
             StartCoroutine(WrongAnswer());
