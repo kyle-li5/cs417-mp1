@@ -28,6 +28,7 @@ public void move(GameObject obj)
 
 void Update()
 {
+    //used gpt to help format my code so it is more readable
     if (!moving || stopped)
         return;
 
