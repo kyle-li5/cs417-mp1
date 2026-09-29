@@ -6,6 +6,7 @@ public class end : MonoBehaviour
     public ParticleSystem par;
     public AudioClip sound;
     public Transform location;
+    public GameObject wall;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,7 @@ public class end : MonoBehaviour
         t.color = Color.green;
         par.Play(true);
         AudioSource.PlayClipAtPoint(sound, location.position);
+        Destroy(wall);
     }
     // Update is called once per frame
     void Update()

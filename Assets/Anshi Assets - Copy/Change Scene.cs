@@ -1,22 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+ 
 public class ChangeScene : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public InputActionReference action;
-    void Start()
-    {
-        action.action.Enable();
-        action.action.performed += (ctx)=>
-        {
-            SceneManager.LoadScene("SampleScene");
-        };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public InputActionReference action;
+ 
+private void OnEnable()
+{
+action.action.Enable();
+action.action.performed += OnActionPerformed;
+}
+ 
+private void OnDisable()
+{
+action.action.performed -= OnActionPerformed;
+action.action.Disable();
+}
+ 
+private void OnActionPerformed(InputAction.CallbackContext ctx)
+{
+SceneManager.LoadScene("kyle-mp1b");
+}
 }
