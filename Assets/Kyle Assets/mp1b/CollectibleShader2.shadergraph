@@ -441,8 +441,8 @@
     "m_StageCapability": 2,
     "m_CustomBinding": "",
     "m_Value": {
-        "x": 0.9921568632125855,
-        "y": 0.95686274766922,
+        "x": 1.0,
+        "y": 0.05003760755062103,
         "z": 0.0
     },
     "m_DefaultValue": {
