@@ -14,7 +14,7 @@ public class addplant : MonoBehaviour
         print("hi");
         if (s.CompareTag("seed")){
             GameObject a = Instantiate(potSoil, transform.position, transform.rotation);
-            Instantiate(x, new Vector3(7.25f,8.7f,1.5f),Quaternion.Euler(45f,0f,0f));
+            Instantiate(x, new Vector3(-3.78107f,5.067f,-16.205f),Quaternion.Euler(45f,0f,0f));
             Destroy(s.gameObject);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(sound,new Vector3(5.415f, 3.69f,-.169f));

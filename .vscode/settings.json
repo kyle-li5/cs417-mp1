@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "mp1b-team-2026-09-28-21-02-52.slnx"
+    "dotnet.defaultSolution": "cs417-mp1.slnx"
 }

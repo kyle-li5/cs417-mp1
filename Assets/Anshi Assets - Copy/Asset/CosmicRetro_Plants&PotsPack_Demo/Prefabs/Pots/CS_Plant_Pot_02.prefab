@@ -152,5 +152,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::addplant
   potSoil: {fileID: 703125990236994623, guid: baf6d298b52d33e42b8f6471067cabbf, type: 3}
   x: {fileID: 2527033234470793338, guid: 9766a37432e9485458a350299c870cfd, type: 3}
-  sound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  location: {fileID: 0}
+  sound: {fileID: 8300000, guid: 7fed5fd931906394596d62d6dd2e9f1c, type: 3}

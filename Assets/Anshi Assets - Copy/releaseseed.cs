@@ -13,7 +13,7 @@ public class releaseseed : MonoBehaviour
         action.action.performed += (ctx)=>
         {
             
-            Instantiate(s,new Vector3(0f,7f,0f), transform.rotation);
+            Instantiate(s,new Vector3(0f,7f,-16.1f), transform.rotation);
             t.text = "Clues Left:\nSoil: 0\nSeed: 0\nWater: 1";
         };
     }

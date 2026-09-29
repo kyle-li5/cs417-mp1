@@ -14,7 +14,7 @@ public class water : MonoBehaviour
         {
             t.text = "Clues Left:\nSoil: 0\nSeed: 0\nWater: 0";
             for (int i =0; i< 10; i+=1) {
-                Vector3 offset = new Vector3(Random.Range(-6f, 6f),10f,Random.Range(-6f, 6f));
+                Vector3 offset = new Vector3(Random.Range(-6f, 6f),6f,Random.Range(-7f, 7f));
                 Instantiate(droplets,transform.position + offset,Quaternion.identity);
                 
             }
