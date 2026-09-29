@@ -3,27 +3,7 @@ guid: e968a0121f4af6f4085d4ac6ca35a3d4
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_BreakerEnclosure
-    second: {fileID: 2100000, guid: a6b5435167bb503408b3487d691038c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Door
-    second: {fileID: 2100000, guid: 68dc46062a859b842bafa95ff8cdcb3c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_DoorHandle
-    second: {fileID: 2100000, guid: da915dad161aec348995879d33ae0e7d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Hinges
-    second: {fileID: 2100000, guid: a67bf1ff4983e18419c854e8d70afc4a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

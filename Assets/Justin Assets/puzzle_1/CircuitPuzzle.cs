@@ -289,25 +289,26 @@ public class CircuitPuzzle : MonoBehaviour {
         start_node = (2, 0);
         goal_node = (0, 2);
 
-        float spawn_start_x = spawn_ref.transform.position.x;
-        float spawn_start_y = spawn_ref.transform.position.y;
-        float spawn_start_z = spawn_ref.transform.position.z;
         float spawn_offset_z = node_prefab.transform.localScale.z;
         float spawn_offset_y = node_prefab.transform.localScale.y;
 
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
-                Vector3 spawn_location = new Vector3(
-                    spawn_start_x,
-                    spawn_start_y - (spawn_offset_y / 2) - (MARGIN * spawn_offset_y) - (row * spawn_offset_y * (1 + MARGIN)),
-                    spawn_start_z - (spawn_offset_z / 2) - (MARGIN * spawn_offset_z) - (col * spawn_offset_z * (1 + MARGIN))
+                Vector3 local_spawn_offset = new Vector3(
+                    0f,
+                    -(spawn_offset_y / 2) - (MARGIN * spawn_offset_y) - (row * spawn_offset_y * (1 + MARGIN)),
+                    -(spawn_offset_z / 2) - (MARGIN * spawn_offset_z) - (col * spawn_offset_z * (1 + MARGIN))
                 );
 
-                puzzle_grid[row, col] = new GridSlot(spawn_location);
+                Vector3 world_spawn_location = spawn_ref.transform.position + spawn_ref.transform.rotation * local_spawn_offset;
+
+                puzzle_grid[row, col] = new GridSlot(world_spawn_location);
 
                 if ((row, col) != empty_slot) {
-                    GameObject node = Instantiate(node_prefab, spawn_location, node_prefab.transform.rotation);
-                    node.transform.parent = spawn_ref.transform;
+                    // Instantiate at world transform
+                    GameObject node = Instantiate(node_prefab, world_spawn_location, spawn_ref.transform.rotation);
+                    // Parent afterward, preserve the world transform
+                    node.transform.SetParent(spawn_ref.transform, true);
                     puzzle_grid[row, col].node = node;
                 }
             }
