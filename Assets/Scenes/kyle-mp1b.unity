@@ -1490,13 +1490,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 689124368470955698, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 793172230258163248, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
       propertyPath: goal
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1805129454090614534, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2331871415303796388, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532540589298247693, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3507852974290449840, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
       propertyPath: m_LocalScale.z
@@ -1510,6 +1522,10 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 8300000, guid: 7fed5fd931906394596d62d6dd2e9f1c, type: 3}
+    - target: {fileID: 5388154712927283818, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5510687992827222218, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
       propertyPath: m_text
       value: 'Controls
@@ -1552,9 +1568,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7419916186655243503, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8166068228215557608, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193105906876490049, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953637872015896765, guid: a98c94bda80119749b6e577e6f43b5a7, type: 3}
+      propertyPath: m_Mass
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4379,6 +4407,10 @@ PrefabInstance:
     - target: {fileID: 1633646846461433793, guid: a61825eecf345954d9997fa6c963e547, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083661571597870972, guid: a61825eecf345954d9997fa6c963e547, type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2280289762382971570, guid: a61825eecf345954d9997fa6c963e547, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -29058,6 +29090,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5969249046877254665, guid: 50e9849f47a3e8b468da11472017ca14, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29102,7 +29138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6231763653435091210, guid: 69d6ba44c58f7b046800730b729f1095, type: 3}
       propertyPath: m_Mass
-      value: 0.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6812675062409017243, guid: 69d6ba44c58f7b046800730b729f1095, type: 3}
       propertyPath: m_Layer
@@ -29588,6 +29624,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4047016339076914922, guid: a22df2b47aa545f498a0aefc1a0b6a23, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4932768591496005046, guid: a22df2b47aa545f498a0aefc1a0b6a23, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -29669,6 +29709,10 @@ PrefabInstance:
     - target: {fileID: 3123642597845338429, guid: 4829db8406e37e64b98db41338e6432a, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566024485668175156, guid: 4829db8406e37e64b98db41338e6432a, type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3648843652692554668, guid: 4829db8406e37e64b98db41338e6432a, type: 3}
       propertyPath: m_LocalPosition.x
