@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+=======
+    "version": 1,
+>>>>>>> mp1b-integration-2
     "name": "InputSystem_Actions",
     "maps": [
         {
@@ -12,7 +16,12 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": true
+=======
+                    "initialStateCheck": true,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Look",
@@ -21,7 +30,12 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": true
+=======
+                    "initialStateCheck": true,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Attack",
@@ -30,7 +44,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Interact",
@@ -39,7 +58,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Crouch",
@@ -48,7 +72,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Jump",
@@ -57,7 +86,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Previous",
@@ -66,7 +100,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Next",
@@ -75,7 +114,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Sprint",
@@ -84,7 +128,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 }
             ],
             "bindings": [
@@ -486,7 +535,12 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Submit",
@@ -495,7 +549,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Cancel",
@@ -504,7 +563,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Point",
@@ -513,7 +577,12 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": true
+=======
+                    "initialStateCheck": true,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "Click",
@@ -522,7 +591,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": true
+=======
+                    "initialStateCheck": true,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "RightClick",
@@ -531,7 +605,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "MiddleClick",
@@ -540,7 +619,12 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "ScrollWheel",
@@ -549,7 +633,12 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "TrackedDevicePosition",
@@ -558,7 +647,12 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 },
                 {
                     "name": "TrackedDeviceOrientation",
@@ -567,7 +661,12 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
+<<<<<<< HEAD
                     "initialStateCheck": false
+=======
+                    "initialStateCheck": false,
+                    "priority": 0
+>>>>>>> mp1b-integration-2
                 }
             ],
             "bindings": [
