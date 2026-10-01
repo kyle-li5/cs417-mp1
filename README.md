@@ -1,5 +1,5 @@
 # MP1c: Escape Sequence Integration for CS417 - Introduction to Extended Reality at the University of Illinois Urbana-Champaign.
 
-Developed by Kyle Li, Anshi Mathur, Justin Kirkland.
+Developed by Kyle Li, Anshi Mathur, and Justin Kirkland.
 
 Itch link: https://kyle-li.itch.io/cs-417-mp1c-escape-sequence-integration
