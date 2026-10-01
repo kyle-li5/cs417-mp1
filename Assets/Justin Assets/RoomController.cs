@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -25,6 +26,8 @@ public class RoomController : MonoBehaviour {
     public GameObject door_panel_anim_to;
     [SerializeField] private CircuitPuzzle circuit_puzzle;
     [SerializeField] private BreakerBox breaker_box;
+
+    public static event Action finishedRoomOne;
     private IEnumerator AnimateIndicator(MeshRenderer renderer, Material end, float duration) {
         duration = Mathf.Max(duration, 0.001f);
         Material mat = renderer.material;
@@ -65,6 +68,7 @@ public class RoomController : MonoBehaviour {
         }
 
         door_panel.transform.position = end;
+        finishedRoomOne?.Invoke();
     }
     public void ReportOnBatteryPlaced(SelectEnterEventArgs args) {
         Debug.Log("RoomController: Battery installed");
