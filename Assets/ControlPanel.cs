@@ -13,8 +13,13 @@ public class ControlPanel : MonoBehaviour {
 
     // canvas stuff
     public GameObject noFuelText;
+    public GameObject noOxygenText;
     public GameObject launchText;
     public GameObject launchButton;
+    public GameObject congrats;
+    public Transform centerTextTransform;
+
+    public GameObject redLight;
 
     // warpspeed stuff
     public Transform warpStart;
@@ -24,6 +29,8 @@ public class ControlPanel : MonoBehaviour {
     public GameObject plane2;
     public GameObject plane3;
     public ParticleSystem particleSystem;
+    public ParticleSystem confetti;
+    public AudioSource yayAudio;
 
     private IEnumerator AnimateControlPanel() {
         float duration = Mathf.Max(anim_duration, 0.001f);
@@ -58,6 +65,7 @@ public class ControlPanel : MonoBehaviour {
         noFuelText.SetActive(true);
         launchText.SetActive(false);
         launchButton.SetActive(false);
+        congrats.SetActive(false);
         FuelReceiver.fuelFull += HandleFuelReceiver;
 
         //plane1.SetActive(false);
@@ -73,8 +81,23 @@ public class ControlPanel : MonoBehaviour {
     void HandleFuelReceiver()
     {
         noFuelText.SetActive(false);
-        launchText.SetActive(true);
-        launchButton.SetActive(true);
+        if (noOxygenText.activeInHierarchy) {
+            noOxygenText.transform.position = centerTextTransform.position;
+        } else {
+            launchText.SetActive(true);
+            launchButton.SetActive(true);
+        }
+    }
+
+    public void HandleOxygen() {
+        noOxygenText.SetActive(false);
+        redLight.SetActive(false);
+        if (noFuelText.activeInHierarchy) {
+            noFuelText.transform.position = centerTextTransform.position;
+        } else {
+            launchText.SetActive(true);
+            launchButton.SetActive(true);
+        }
     }
 
     public void Launch()
@@ -93,6 +116,9 @@ public class ControlPanel : MonoBehaviour {
         Vector3 s = warpStart.position;
         Vector3 e = warpEnd.position;
 
+        Vector3 startScale = warpStart.localScale;
+        Vector3 endScale = warpEnd.localScale;
+
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -104,11 +130,20 @@ public class ControlPanel : MonoBehaviour {
             t = t * t * (3f - 2f * t);
 
             warpspeed.transform.position = Vector3.Lerp(s, e, t);
+            warpspeed.transform.localScale = Vector3.Lerp(startScale, endScale, t);
 
             yield return null;
         }
 
         warpspeed.transform.position = e;
+        warpspeed.transform.localScale = endScale;
+
+        yield return new WaitForSeconds(3f);
+        launchText.SetActive(false);
+        launchButton.SetActive(false);
+        congrats.SetActive(true);
+        yayAudio.Play();
+        confetti.Play();
         //plane1.SetActive(true);
         //plane2.SetActive(true);
         //plane3.SetActive(true);

@@ -19,6 +19,7 @@ public class PourController : MonoBehaviour
     }
     void HandleControlPanel()
     {
+        fuelStream.Stop();
         enablePour = false;
     }
 

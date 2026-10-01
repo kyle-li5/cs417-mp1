@@ -7,20 +7,21 @@ public class blacklight : MonoBehaviour
     public GameObject box;
     public InputActionReference action;
     public TMP_Text t;
-    void Start()
+    private void OnEnable()
     {
         action.action.Enable();
-        action.action.performed += (ctx)=>
-        {        
-            Destroy(box);
-            t.text = "Clues Left:\nSoil: 0\nSeed: 1\nWater: 1";
-        };
+        action.action.performed += OnBlacklightAction; 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
-    
+        action.action.performed -= OnBlacklightAction; 
+        action.action.Disable(); 
+    }
+
+    private void OnBlacklightAction(InputAction.CallbackContext ctx)
+    {
+        Destroy(box);
+        t.text = "Clues Left:\nSoil: 0\nSeed: 1\nWater: 1";
     }
 }

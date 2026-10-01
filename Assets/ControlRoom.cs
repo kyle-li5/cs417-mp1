@@ -23,6 +23,7 @@ public class ControlRoom : MonoBehaviour {
     public float sequence_anim_delay;
     public ControlPanel control_panel_ref;
     public FuelTank fuel_tank;
+    public PlantContainer plant_container;
 
     private IEnumerator AnimateIndicator(MeshRenderer renderer, Material end, float duration) {
         duration = Mathf.Max(duration, 0.001f);
@@ -99,6 +100,7 @@ public class ControlRoom : MonoBehaviour {
     private void OnPipeSequenceComplete() {
         control_panel_ref.PlayControlPanelAnim();
         fuel_tank.PlayFuelTankPanelOpen();
+        plant_container.PlayPlantContainerPanelOpen();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {

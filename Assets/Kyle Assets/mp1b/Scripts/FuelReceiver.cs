@@ -15,7 +15,7 @@ public class FuelReceiver : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        fuelPivot.localScale = new Vector3(fuelPivot.localScale.x, 0f, fuelPivot.localScale.z);
+        fuelPivot.localScale = new Vector3(0f, fuelPivot.localScale.y, fuelPivot.localScale.z);
         fuelFill.fillAmount = 0.02f;
     }
 
@@ -37,7 +37,7 @@ public class FuelReceiver : MonoBehaviour
     {
         float fillPercentage = currentFuel / maxFuel;
         Vector3 newScale = fuelPivot.localScale;
-        newScale.y = fillPercentage * maxHeight;
+        newScale.x = fillPercentage * maxHeight;
         fuelPivot.localScale = newScale;
         fuelFill.fillAmount = fillPercentage;
     }

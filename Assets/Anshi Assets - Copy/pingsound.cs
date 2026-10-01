@@ -72,6 +72,10 @@ public class pingsound : MonoBehaviour
                 }
                 yield return new WaitForSeconds(pingCooldown);
             }
+            else if (room >= 3)
+            {
+                break;
+            }
         }
     }
 }
